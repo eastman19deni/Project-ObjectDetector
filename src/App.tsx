@@ -1,13 +1,15 @@
 import './App.css'
-import Object from './components/objectDetector'
+import ObjectDetectionUI from './components/ObjectDetection';
+
+
 
 function App() {
 
   return (
     <>
-    <Object />    
+    <ObjectDetectionUI />
     </>
-  )
+  );
 }
 
 export default App

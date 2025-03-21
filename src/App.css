@@ -1,42 +1,75 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+body {
+  font-family: 'Roboto', sans-serif; /* Используем Roboto как основной шрифт */
+  margin: 2em;
+  color: #3d3d3d;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+h1 {
+  color: #007f8b; /* Цвет заголовка */
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h2 {
+  clear: both; /* Очистка float */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+em {
+  font-weight: bold; /* Жирный текст для акцента */
 }
 
-.card {
-  padding: 2em;
+video {
+  clear: both;
+  display: block;
+  transform: rotateY(180deg); /* Зеркальное отражение видео */
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
 }
 
-.read-the-docs {
-  color: #888;
+section {
+  opacity: 1;
+  transition: opacity 500ms ease-in-out; /* Плавное изменение прозрачности */
+}
+
+/* Стили для кнопки MUI */
+.mui-button.removed {
+  display: none; /* Скрыть кнопку, если добавлен класс removed */
+}
+
+.invisible {
+  opacity: 0.2; /* Полупрозрачный элемент */
+}
+
+.videoView,
+.detectOnClick {
+  position: relative;
+  float: left;
+  width: 48%;
+  margin: 2% 1%;
+  cursor: pointer;
+}
+
+.detectOnClick p,
+.videoView p {
+  position: absolute;
+  padding: 5px;
+  background-color: #007f8b; /* Цвет фона */
+  color: #fff; /* Белый текст */
+  border: 1px dashed rgba(255, 255, 255, 0.7); /* Пунктирная рамка */
+  z-index: 2;
+  font-size: 12px;
+  margin: 0;
+}
+
+.highlighter {
+  background: rgba(0, 255, 0, 0.25); /* Полупрозрачный зеленый фон */
+  border: 1px dashed #fff; /* Пунктирная рамка */
+  z-index: 1;
+  position: absolute;
+}
+
+.detectOnClick {
+  z-index: 0;
+}
+
+.detectOnClick img {
+  width: 100%; /* Изображение занимает всю ширину контейнера */
 }

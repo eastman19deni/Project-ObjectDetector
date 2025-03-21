@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import Button from '@mui/material/Button';
-import { ObjectDetectorHandler } from './ObjectDetector';
+import { ObjectDetectorHandler } from './Object_Detector';
 
 const ObjectDetectionUI: React.FC = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -50,7 +50,7 @@ const ObjectDetectionUI: React.FC = () => {
         {/* <div>This demo uses a model trained on the COCO dataset. It can identify 80 different classes of object in an image. <a href="https://github.com/amikelive/coco-labels/blob/master/coco-labels-2014_2017.txt" target="_blank">See a list of available classes</a></div> */}
         <div id="liveView" className="videoView">
           <Button id="webcamButton" variant="contained" onClick={enableCam}>
-            Включение камеры
+            Включение Камеры
           </Button>
           <video id="webcam" ref={videoRef} autoPlay playsInline></video>
           <div id="lineView" ref={lineViewRef}></div>

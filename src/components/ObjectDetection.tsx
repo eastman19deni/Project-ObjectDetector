@@ -18,7 +18,7 @@ const ObjectDetectionUI: React.FC = () => {
     }
   }, []);
 
-  const imageFiles = ['pancake.jpeg', 'por.jpeg', 'retrocar.jpeg', 'street.jpeg']; 
+  const imageFiles = ['pancake.jpeg', 'por.jpeg', 'retrocar.jpeg']; 
 
   const enableCam = async () => {
     if (videoRef.current && lineViewRef.current) {
@@ -32,7 +32,7 @@ const ObjectDetectionUI: React.FC = () => {
 
       <section id="demos">
         <h2>Возможности отслеживания</h2>
-        <p><b>нажмите на картинку</b> и она должна отобразиться в показать что они отслеживается</p>
+        <p><b>нажмите на картинку!</b><br/>и она должна отобразиться</p>
 
         {imageFiles.map((imageFile, index) => (
           <div key={index} className="detectOnClick">
@@ -47,7 +47,7 @@ const ObjectDetectionUI: React.FC = () => {
 
         <h2>Продолжаем показывать возможности</h2>
         <p>Поместите какой любо обьект перед камерой должно показать на экране что за предмет и его название в реальном времени</p>
-        {/* <div>This demo uses a model trained on the COCO dataset. It can identify 80 different classes of object in an image. <a href="https://github.com/amikelive/coco-labels/blob/master/coco-labels-2014_2017.txt" target="_blank">See a list of available classes</a></div> */}
+        
         <div id="liveView" className="videoView">
           <Button id="webcamButton" variant="contained" onClick={enableCam}>
             Включение Камеры

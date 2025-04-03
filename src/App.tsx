@@ -1,5 +1,5 @@
 import './App.css'
-import ObjectDetectionUI from './components/ObjectDetection';
+import ObjectDetectionUI from './components/Object_Web';
 
 
 
